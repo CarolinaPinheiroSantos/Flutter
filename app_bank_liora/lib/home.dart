@@ -12,15 +12,28 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column( 
-        
         children: [
-          Column(
+          SizedBox(height: 30),
+          Container(
+            width: 400,
+            height: 120,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: const Color(0xFFFFFFFF),
+            ),
+            child:   
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Saldo em conta", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800),),
+                Text("R\$ 0,04", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)
+
+              ]
+            ),
             
-            children: [
-              Text("Saldo em conta", style: TextStyle(fontSize: 20),),
-              Text("R\$ 0,04", style: TextStyle(fontSize: 30),)
-            ],
           ),
+          SizedBox(height: 50),
 
           Container(
             width: 400,
@@ -46,15 +59,15 @@ class _HomeState extends State<Home> {
                       Text("****1089"),
                     ],
                   ),
-                  const SizedBox(width: 70),
-                  const Text("R\$ 1.041,04 >",style: TextStyle(fontWeight: FontWeight.w900),
+                  SizedBox(width: 70),
+                  Text("R\$ 1.041,04 >",style: TextStyle(fontWeight: FontWeight.w900),
                   ),
                 ],
               ),
             ),
           ),
 
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
 
           // segundo cartão
           Container(
