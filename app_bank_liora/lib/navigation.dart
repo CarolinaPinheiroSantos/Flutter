@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
 import 'cards.dart';
+import 'profile.dart';
 
 class Navigation extends StatefulWidget {
   @override
@@ -12,7 +13,7 @@ class _NavigationState extends State<Navigation> {
   final List<Widget> _pages = [
     Home(),
     Cards(),
-    Home()
+    Profile(),
   ];
 
   @override
@@ -28,7 +29,7 @@ class _NavigationState extends State<Navigation> {
             _selectedIndex = index;
           });
         },
-        selectedItemColor: Color(0xFFC95C9F),
+        selectedItemColor: Color(0xFFE2536C),
         unselectedItemColor: Colors.grey, 
         showUnselectedLabels: true,
         items: const [

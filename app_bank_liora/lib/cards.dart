@@ -103,7 +103,6 @@ class _CardsState extends State<Cards> {
                       ),
                       
                       Column(
-                        
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text("Comida", style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold,),),
