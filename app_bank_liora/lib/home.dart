@@ -11,6 +11,24 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+        toolbarHeight: 100,
+        elevation: 0,
+        backgroundColor: Colors.transparent, // deixa o fundo transparente
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+        image: DecorationImage(
+        image: AssetImage("assets/images/fundo_login.png"),
+        fit: BoxFit.cover,
+      ),
+    ),
+  ), title: Row(
+          children: [
+            Icon(Icons.account_circle, color: Colors.white, size: 50,),
+            SizedBox(width: 30),
+            Text("Olá, Carolina", style: TextStyle(fontSize: 18, color: Colors.white)),
+          ],
+        )),
       
       body: Center( 
         child: 
@@ -18,10 +36,12 @@ class _HomeState extends State<Home> {
           children: [
           Container(
             width: double.infinity,
-            height: 160,
+            height: 150,
             decoration: BoxDecoration(
-              color:  Color(0xFFE2536C),
-            ),
+              image: DecorationImage(
+                image: AssetImage("assets/images/fundo_login.png"),
+                fit: BoxFit.cover,   // faz a imagem preencher o container
+            ),),
             child:   
             Padding(
               padding: EdgeInsets.only(left: 25, right: 25),

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -17,12 +19,25 @@ class _ApiPageState extends State<ApiPage> {
     getvalue();
   }
 
-  void getvalue(){
+  void getvalue() async {
+    final response = await http.get(Uri.parse("https://viacep.com.br/ws/01001000/json/ "));
+    if(response.statusCode == 200){
+      final data = jsonDecode(response.body);
+      setState(() {
+      value = data["logradouro"];
+      });
+    }
 
   }
-}
 
+
+  
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: Scaffold(
+        body: value == null ? CircularProgressIndicator() : Text("$value")
+      ),
+    );
   }
+}

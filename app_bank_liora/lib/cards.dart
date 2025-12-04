@@ -19,6 +19,13 @@ class _CardsState extends State<Cards> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(toolbarHeight: 100, backgroundColor: Color(0xFFE2536C), title: Row(
+          children: [
+            Icon(Icons.account_circle, color: Colors.white, size: 50,),
+            SizedBox(width: 30),
+            Text("Olá, Carolina", style: TextStyle(fontSize: 18, color: Colors.white)),
+          ],
+        )),
         body:  
         Column(
           children: [
